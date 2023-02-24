@@ -1,0 +1,12 @@
+/* working fine */
+.Gallery
+{
+    height: 100vh;
+    overflow: hidden;
+}
+.Gallery .part1
+{
+    height: 100vh;
+    overflow: hidden;
+    object-fit:cover;
+}

@@ -1,0 +1,27 @@
+/* Working fine */
+.slider {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  /* display: flex; */
+  text-align: center;
+}
+
+.slider-inner::-webkit-scrollbar {
+  display: none;
+}
+.item {
+  display: flex;
+}
+.item .card {
+  margin-left: 20px;
+}
+.card-dude {
+  /* display: none; */
+  width: 18rem;
+}
+@media only screen and (max-width: 600px) {
+  .card-dude {
+    /* display: none; */
+    width: fit-content;
+  }
+}

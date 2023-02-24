@@ -1,0 +1,29 @@
+/* Working fine */
+.slider
+{
+    margin-top: 10vh;
+    /* display: flex; */
+    text-align: center;
+}
+.slider-inner
+{
+    width:90%;
+    overflow: scroll;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    display: flex;
+    scroll-behavior: smooth;
+}
+.slider-inner::-webkit-scrollbar
+{
+    display: none;
+}
+.item
+{
+    display: flex;
+}
+.item .card
+{
+    margin-left: 20px;
+}
