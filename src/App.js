@@ -5,6 +5,7 @@ import AllProductsBlock from './components/AllProductsBlock';
 import CorousalPart from './components/CorousalPart';
 import FooterCam from './components/FooterCam';
 import NavyBar from './components/NavyBar';
+import ProductView from './components/ProductView';
 // import SoloProductsBlock from './components/SoloProductsBlock';
 
 function App() {
@@ -43,14 +44,32 @@ function App() {
 
     }
     getme();
-  },[]);
+  },[firstData]);
+
+  const[goWell,setGoWell]=useState(true);
+  
+
+  const onClickMe=(e)=>
+  {
+    // console.log(e);
+    if(goWell===true){setGoWell(false)}
+    else(setGoWell(true));
+    // return e
+  }
+
   return (
     <>
+    <div className='visible'>
     <NavyBar/>
     <CorousalPart/>
     <AboutCamera/>
-    <AllProductsBlock first={firstData} second={secondData} third={thirdData} fourth={fourthData} one={firstName} two={secondName} three={thirdName} four={fourthName}/>
+    <AllProductsBlock first={firstData} second={secondData} third={thirdData} fourth={fourthData} one={firstName} two={secondName} three={thirdName} four={fourthName} onClickMe={onClickMe}  />
     <FooterCam/>
+    
+    </div>
+    <ProductView goWell={goWell}/>;
+    
+    
     </>
   );
 }
