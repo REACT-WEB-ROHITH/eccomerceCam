@@ -4,7 +4,8 @@ import "../componentsCss/ProductView.css";
 function ProductView(props) {
   //  const obj={title:"Loading...",id:"Loading...",description:"Loading...",url:"Loading"}
   const goWell=props.goWell;
-  const [obj,setObj]=useState({});
+  const [obj,setObj]=useState({title:"Loading...",id:"Loading...",description:"Loading...",url:"Loading"});
+  // console.log(obj);
   // const [pin,setpin]=useState(11);
 
   
@@ -12,7 +13,7 @@ function ProductView(props) {
 
   useEffect(()=>{
     let turtle=JSON.parse(localStorage.getItem("proBlock"));
-    setObj(turtle);
+    turtle!==null?setObj(turtle):setObj({title:"Loading...",id:"Loading...",description:"Loading...",url:"Loading"});
     // console.log(turtle);
     // console.log(`In product view ${goWell}`);
   },[goWell]);
