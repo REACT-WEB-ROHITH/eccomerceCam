@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/ecommerceCam/static/css/main.83e847a6.css",
+    "main.js": "/ecommerceCam/static/js/main.e92d45d9.js",
+    "static/js/787.f9863587.chunk.js": "/ecommerceCam/static/js/787.f9863587.chunk.js",
+    "static/media/revicons.eot": "/ecommerceCam/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/ecommerceCam/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/ecommerceCam/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/ecommerceCam/index.html",
+    "main.83e847a6.css.map": "/ecommerceCam/static/css/main.83e847a6.css.map",
+    "main.e92d45d9.js.map": "/ecommerceCam/static/js/main.e92d45d9.js.map",
+    "787.f9863587.chunk.js.map": "/ecommerceCam/static/js/787.f9863587.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.83e847a6.css",
+    "static/js/main.e92d45d9.js"
+  ]
+}
