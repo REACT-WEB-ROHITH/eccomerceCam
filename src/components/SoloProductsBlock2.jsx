@@ -8,6 +8,7 @@ function SoloProductsBlock2(props) {
     const dataa = props.data;
   const dName = props.dName;
 
+  const onClickMe=props.onClickMe;
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -31,6 +32,35 @@ function SoloProductsBlock2(props) {
         items: 1,
       },
   };
+
+  const totalBox=document.querySelector(".contDim");
+  const fullBox=document.querySelector(".visible");
+  
+
+  const addToCart=(e)=>
+  {
+
+    let proBlock=
+    {
+      title:e.title,
+      url:e.url,
+      id:e.id,
+      description:e.description
+    }
+    // console.log(e);
+   
+    
+    
+    localStorage.setItem("proBlock",JSON.stringify(proBlock));
+    proBlock={};
+    totalBox.classList.toggle("invisible");
+    fullBox.classList.toggle("invisible");
+
+    onClickMe(e);
+
+   
+  }
+
   return (
     <>
     <div className="slider">
@@ -39,22 +69,22 @@ function SoloProductsBlock2(props) {
       <Carousel responsive={responsive} >
         {dataa.map((cams) => (
               <div className="card card-dude" key={cams.id}>
-                <img src={cams.url} className="card-img-top" alt="..." />
+                <img src={cams.url} className="card-img-top" alt="..."/>
                 <div className="card-body">
                   <h5 className="card-title">{cams.title}</h5>
                   <p className="card-text">{cams.description}</p>
                 </div>
                 <ul className="list-group list-group-flush">
-                  {/* <li className="list-group-item">An item</li> */}
+                  <li className="list-group-item">SELLER:{cams.id}</li>
                 </ul>
-                {/* <div className="card-body">
-                  <a href="/" className="card-link">
-                    Card link
-                  </a>
-                  <a href="/" className="card-link">
-                    Another link
-                  </a>
-                </div> */}
+                <div className="card-body">
+                  <div className="container-fluid">
+                    <div className="row">
+                      <div className="col-6"><button className="btn-cart" onClick={()=>{addToCart(cams)}}>VIEW</button></div>
+                      <div className="col-6"><button className="btn-buy">BUY</button></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
       </Carousel>
